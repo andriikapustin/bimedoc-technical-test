@@ -1,0 +1,14 @@
+<section class="professionals-view">
+  <ng-container *ngIf="!(professionalsLoading$ | async); else spinner">
+    <app-professionals-table
+      *ngIf="(professionalsLoaded$ | async) && (professionals$ | async) as professionals"
+      [professionals]="professionals"
+      [totalRecords]="professionals.length"
+      (openDetails)="onOpenProfessionalDetails($event)"
+    ></app-professionals-table>
+  </ng-container>
+</section>
+
+<ng-template #spinner>
+  <app-spinner></app-spinner>
+</ng-template>

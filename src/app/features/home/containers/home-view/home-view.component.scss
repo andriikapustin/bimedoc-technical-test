@@ -1,0 +1,28 @@
+.home-view {
+  display: flex;
+  min-height: 100vh;
+}
+
+.welcome {
+  margin: auto;
+  text-align: center;
+
+  &__logo {
+    width: 206px;
+    margin-bottom: 86px;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 44px;
+  }
+
+  &__link {
+    padding: 3px 40px;
+    font-weight: 400;
+    letter-spacing: .5px;
+  }
+}

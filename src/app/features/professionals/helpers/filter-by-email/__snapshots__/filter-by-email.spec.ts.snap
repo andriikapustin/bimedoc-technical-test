@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`filterByEmailAndSecureEmail() should match snapshot 1`] = `
+Array [
+  Object {
+    "email": "Thomas@gmail.com",
+  },
+  Object {
+    "secure_email": Array [
+      "THOMAS@gmail.com",
+    ],
+  },
+  Object {
+    "email": "andrii@gmail.com",
+    "secure_email": Array [
+      "thomas@gmail.com",
+    ],
+  },
+]
+`;

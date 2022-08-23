@@ -1,0 +1,20 @@
+.mat-dialog {
+  .mat-dialog-header {
+    display: flex;
+  }
+
+  .mat-dialog-title {
+    text-transform: capitalize;
+  }
+
+  .mat-dialog-header {
+    .mat-dialog-close {
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      margin-left: auto;
+      min-width: auto;
+      line-height: 32px;
+    }
+  }
+}

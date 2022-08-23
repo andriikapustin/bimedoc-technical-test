@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sortProfessionalsByUserName() should match snapshot 1`] = `
+Array [
+  Object {
+    "first_name": "Alex",
+  },
+  Object {
+    "first_name": "Andrii",
+  },
+  Object {
+    "first_name": "Nicolas",
+  },
+  Object {
+    "first_name": "thomas",
+  },
+  Object {
+    "first_name": "Thomas",
+  },
+  Object {
+    "first_name": "THOMAS",
+  },
+]
+`;

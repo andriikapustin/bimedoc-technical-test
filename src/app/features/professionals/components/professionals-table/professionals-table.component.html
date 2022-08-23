@@ -1,0 +1,42 @@
+<mat-table [dataSource]="dataSource" class="professionals-table">
+
+  <ng-container matColumnDef="full_name">
+    <mat-header-cell *matHeaderCellDef>first_name last_name</mat-header-cell>
+    <mat-cell *matCellDef="let professional" class="professional-name">
+      {{ professional.first_name + ' ' + professional.last_name | lowercase }}
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="rpps_number">
+      <mat-header-cell *matHeaderCellDef>rpps_number</mat-header-cell>
+      <mat-cell *matCellDef="let professional">{{ professional.rpps_number }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="profession_name">
+    <mat-header-cell *matHeaderCellDef>profession_name</mat-header-cell>
+    <mat-cell *matCellDef="let professional">{{ professional.profession_name }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="postcode-city">
+    <mat-header-cell *matHeaderCellDef>postcode - city</mat-header-cell>
+    <mat-cell *matCellDef="let professional">
+      {{ professional.postcode }}
+      <ng-container *ngIf="professional.postcode && professional.city"> - </ng-container>
+      {{ professional.city }}
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="columns"></mat-header-row>
+
+  <mat-row *matRowDef="let row; columns: columns" (click)="onRowClick(row)"></mat-row>
+
+</mat-table>
+
+<mat-paginator
+  [length]="totalRecords"
+  [pageSizeOptions]="tableOptions.pageSizeOptions"
+  [pageSize]="tableOptions.pageSize"
+  showFirstLastButtons 
+  aria-label="Select page"
+  class="table-pagination"
+></mat-paginator>

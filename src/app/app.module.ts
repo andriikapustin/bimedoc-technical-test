@@ -3,12 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { RootViewComponent } from './containers/root-view/root-view.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
-  providers: [],
-  bootstrap: [AppComponent],
+  imports: [BrowserAnimationsModule, BrowserModule, AppRoutingModule],
+  declarations: [RootViewComponent],
+  bootstrap: [RootViewComponent],
 })
 export class AppModule {}

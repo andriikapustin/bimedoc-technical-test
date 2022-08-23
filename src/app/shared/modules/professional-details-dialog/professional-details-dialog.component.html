@@ -1,0 +1,27 @@
+<div class="mat-dialog">
+  <div class="mat-dialog-header">
+    <h1 mat-dialog-title class="mat-dialog-title">
+      {{ data.gender + '. ' + data.first_name + ' ' + data.last_name | lowercase }}</h1>
+
+    <button
+      mat-button
+      mat-dialog-close
+      class="mat-dialog-close"
+    >
+      <mat-icon>clear</mat-icon>
+    </button>
+  </div>
+
+  <div mat-dialog-content>
+    <div class="details">
+      <div *ngFor="let column of columns" class="details__col">
+        <mat-list role="list">
+          <mat-list-item *ngFor="let row of column" role="listitem" class="details__row details-info">
+            <div class="details-info__label">{{ row.label }}:</div>
+            <div class="details-info__value">{{ row.name | format : data : row.formatter }}</div>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </div>
+  </div>
+</div>

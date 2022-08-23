@@ -10,6 +10,10 @@ const routes: Routes = [
     path: 'professionals',
     loadChildren: () => import('./features/professionals/professionals.module').then((m) => m.ProfessionalsModule),
   },
+  {
+    path: '**',
+    redirectTo: '',
+  },
 ];
 
 @NgModule({

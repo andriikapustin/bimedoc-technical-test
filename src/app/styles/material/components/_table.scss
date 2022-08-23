@@ -1,10 +1,12 @@
 .mat-table {
   background-color: transparent;
+  overflow-x: auto;
 
   .mat-row,
   .mat-header-row {
     padding: 0 30px;
     min-height: 26px;
+    min-width: 700px;
   }
 
   .mat-header-row {
@@ -24,5 +26,9 @@
     margin: 12px 0;
     min-height: 60px;
     cursor: pointer;
+  }
+
+  .mat-cell {
+    color: $font-color;
   }
 }

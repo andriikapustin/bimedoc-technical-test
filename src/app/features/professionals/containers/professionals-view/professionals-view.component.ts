@@ -14,11 +14,17 @@ import { ProfessionalsFacade } from '../../state/facade/professionals.facade';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProfessionalsViewComponent implements OnInit {
-  public readonly professionals$ = this.professionalsFacade.professionals$.pipe(map(filterByEmailAndSecureEmail), map(sortByFirstName));
+  public readonly professionals$ = this.professionalsFacade.professionals$.pipe(
+    map(filterByEmailAndSecureEmail),
+    map(sortByFirstName),
+  );
   public readonly professionalsLoading$ = this.professionalsFacade.professionalsLoading$;
   public readonly professionalsLoaded$ = this.professionalsFacade.professionalsLoaded$;
 
-  constructor(private readonly professionalsFacade: ProfessionalsFacade, private readonly dialog: MatDialog) {}
+  constructor(
+    private readonly professionalsFacade: ProfessionalsFacade,
+    private readonly dialog: MatDialog,
+  ) {}
 
   public ngOnInit(): void {
     this.professionalsFacade.fetchProfessionals();

@@ -10,7 +10,14 @@ import { FormatPipeModule } from '../../pipes/format-pipe.module';
 import { ProfessionalDetailsDialogComponent } from './professional-details-dialog.component';
 
 @NgModule({
-  imports: [CommonModule, MatButtonModule, MatDialogModule, MatIconModule, MatListModule, FormatPipeModule],
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatIconModule,
+    MatListModule,
+    FormatPipeModule,
+  ],
   declarations: [ProfessionalDetailsDialogComponent],
 })
 export class ProfessionalDetailsDialogModule {}

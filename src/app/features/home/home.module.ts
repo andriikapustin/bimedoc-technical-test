@@ -7,6 +7,10 @@ import { HomeRoutingModule } from './home-routing.module';
 
 @NgModule({
   declarations: [HomeViewComponent],
-  imports: [CommonModule, HomeRoutingModule, MatButtonModule],
+  imports: [
+    CommonModule,
+    HomeRoutingModule,
+    MatButtonModule,
+  ],
 })
 export class HomeModule {}

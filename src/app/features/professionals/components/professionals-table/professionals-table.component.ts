@@ -16,13 +16,13 @@ export class ProfessionalsTableComponent implements OnInit, AfterViewInit {
   @Input() public professionals: IProfessional[];
   @Input() public totalRecords: number;
 
-  @Output() public readonly openDetails = new EventEmitter<IProfessional>();
-
-  @ViewChild(MatPaginator) public paginator: MatPaginator;
-
   public readonly dataSource = new MatTableDataSource<IProfessional>();
   public readonly columns = TABLE_COLUMNS;
   public readonly tableOptions = DEFAULT_TABLE_OPTIONS;
+
+  @Output() private readonly openDetails = new EventEmitter<IProfessional>();
+
+  @ViewChild(MatPaginator) private readonly paginator: MatPaginator;
 
   public ngOnInit(): void {
     this.dataSource.data = this.professionals;

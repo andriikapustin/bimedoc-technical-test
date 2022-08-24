@@ -12,7 +12,10 @@ import { ProfessionalsRoutingModule } from './professionals-routing.module';
 import { StateModule } from './state/state.module';
 
 @NgModule({
-  declarations: [ProfessionalsViewComponent, ProfessionalsTableComponent],
+  declarations: [
+    ProfessionalsViewComponent,
+    ProfessionalsTableComponent,
+  ],
   imports: [
     CommonModule,
     ProfessionalsRoutingModule,

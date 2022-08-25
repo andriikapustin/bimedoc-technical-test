@@ -3,7 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
 import { IProfessional } from '../../../../models/professional.model';
-import { DEFAULT_TABLE_OPTIONS } from '../../../../shared/constants/default-table-options';
+import { DEFAULT_PAGINATION_OPTIONS } from '../../../../shared/constants/default-pagination-options';
 import { TABLE_COLUMNS } from '../../constants/table-columns';
 
 @Component({
@@ -18,7 +18,7 @@ export class ProfessionalsTableComponent implements OnInit, AfterViewInit {
 
   public readonly dataSource = new MatTableDataSource<IProfessional>();
   public readonly columns = TABLE_COLUMNS;
-  public readonly tableOptions = DEFAULT_TABLE_OPTIONS;
+  public readonly paginationOptions = DEFAULT_PAGINATION_OPTIONS;
 
   @Output() private readonly openDetails = new EventEmitter<IProfessional>();
 
